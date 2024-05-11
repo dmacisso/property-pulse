@@ -3,7 +3,7 @@ import HomeProperties from '@/components/HomeProperties';
 import InfoBoxes from '@/components/InfoBoxes';
 // import connectDB from '@/config/database';
 
-const HomePage = async () => {
+const HomePage = () => {
   // await connectDB();
   return (
     <>
