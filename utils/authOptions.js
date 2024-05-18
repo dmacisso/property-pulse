@@ -1,3 +1,6 @@
+import connectDB from '@/config/database';
+import User from '@/models/User';
+
 import GoogleProvider from 'next-auth/providers/google';
 
 export const authOptions = {
@@ -18,7 +21,9 @@ export const authOptions = {
     // Invoked on successful authentication
     async signIn({ profile }) {
       // 1. Connect to the database
+      await connectDB();
       // 2. See if the user already exists
+      const userExists = await User.findOne({ email: profile.email });
       // 3. If not, create a new user in the database
       // 4. Return true to signify that we've created the user
     },
