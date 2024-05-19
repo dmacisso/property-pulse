@@ -1,6 +1,6 @@
 import { Schema, model, models } from 'mongoose';
 
-const userSchema = new Schema(
+const UserSchema = new Schema(
   {
     username: { type: String, required: [true, 'Username is required'] },
     email: {
@@ -21,6 +21,6 @@ const userSchema = new Schema(
   }
 );
 
-const User = models.user || model('user', userSchema); // if user model exists, use it, otherwise create new user
+const User = models.user || model('user', UserSchema); // if user model exists, use it, otherwise create new user
 
 export default User;
