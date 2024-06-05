@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 //MARK: Components
 import PropertyHeaderImage from '@/components/PropertyHeaderImage';
+import PropertyImages from '@/components/PropertyImages';
 import PropertyDetails from '@/components/PropertyDetails';
 import Spinner from '@/components/Spinner';
 
@@ -146,6 +147,8 @@ const PropertyPage = () => {
               </div>
             </div>
           </section>
+          {/* MARK:  Property Images */}
+          <PropertyImages images={property.images} />
         </>
       )}
     </>

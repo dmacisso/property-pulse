@@ -5,6 +5,9 @@ const propertySchema = new Schema(
     owner: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     name: { type: String, required: [true, 'Name is required'] },
     type: { type: String, required: [true, 'Type is required'] },
+    description: {
+      type: String,
+    },
     location: {
       street: { type: String },
       city: { type: String },
